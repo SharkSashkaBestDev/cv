@@ -1,0 +1,197 @@
+<!-- Wide card with share menu button -->
+<!-- background-color: rgb(3, 89, 94) -->
+<!-- background-color: rgb(0, 73, 77) -->
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/images/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	background-color: rgb(3, 89, 94);
+}
+
+.root {
+	height: 100%;
+	min-height: 100%;
+	/*width: 100%;*/
+	color: white;
+	display: flex;
+	flex-direction: row;
+}
+
+.root__left, .root__right {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.root__left {
+	height: 100%;
+}
+
+.root__right {
+	background-color: white;
+	padding: 1.5em;
+}
+
+.root__left__personal-info__title, .root__left__skills__title {
+	background-color: rgb(0, 73, 77);
+}
+
+.root__right__details {
+	/*width: 100%;*/
+	color: black;
+	height: 100%;
+}
+
+/*Block*/
+.root__left__author-title,
+.root__left__author-role,
+.root__left__personal-info,
+.root__left__personal-info__text,
+.root__left__skills {
+	display: block;
+}
+
+/*Spacing*/
+.root__left__author-title {
+	margin: 1em 1.5em 0 .6em;
+	font-size: 24pt;
+	line-height: 24pt;
+}
+.root__left__author-role {
+	margin: 1em 1.5em 1em 1.5em;
+}
+.root__left__personal-info__title, .root__left__skills__title {
+	padding: .5em 1.5em;
+}
+.root__left__personal-info__text {
+	padding: 1em 2em 1em 1.5em;
+}
+.root__left__personal-info__text__email, 
+.root__left__personal-info__text__birthdate, 
+.root__left__personal-info__text__address, 
+.root__left__personal-info__text__phone,
+.root__left__personal-info__text__social {
+	margin-bottom: .3em;
+}
+.root__left__personal-info__text__email-address-last, 
+.root__left__personal-info__text__birthdate-value,
+.root__left__personal-info__text__phone-number,
+.root__left__personal-info__text__country {
+	margin-bottom: 1em;
+}
+.root__left__skills__body__skill__title,
+.root__right__skills__body__skill__title {
+	margin-bottom: .5em;
+}
+.root__left__skills__body__skill__level,
+.root__right__skills__body__skill__level {
+	margin-top: .5em;
+}
+
+/*Skill*/
+.root__left__skills__body {
+	padding-top: .5em;
+}
+
+.root__left__skills__body__skill {
+	margin: 1em;
+}
+
+.root__right__skills__body__first-line {
+	margin-top: 1em;
+}
+
+.root__right__skills__body__skill {
+	margin: 0em 1em 1em 1em;
+	max-width: 50%;
+	width: 45%;
+	float: left;
+}
+
+/*Background*/
+.root,
+.root__left__skills,
+.root__bottom-right,
+.root__right__skills {
+	background-color: rgb(3, 89, 94);
+}
+
+.root__left__skills__body__skill__level-value,
+.root__right__skills__body__skill__level-value {
+	display: block;
+	width: 100%;
+	height: 1em;
+	background-color: rgb(0, 73, 77);
+}
+
+.lvl-rate-5, .lvl-rate-4, .lvl-rate-3, .lvl-rate-2, .lvl-rate-1 {
+	display: block;
+	height: 1em;
+	background-color: white;
+	margin-top: -1em;
+}
+
+.lvl-rate-5 {
+	width: 100%;
+}
+
+.lvl-rate-4 {
+	width: 80%;
+}
+
+.lvl-rate-3 {
+	width: 60%;
+}
+
+.lvl-rate-2 {
+	width: 40%;
+}
+
+.lvl-rate-1 {
+	width: 20%;
+}
+
+/*Alignment*/
+.root__left__skills__body__skill__level,
+.root__right__skills__body__skill__level {
+	text-align: right;
+}
+
+/*Experience & Education*/
+.root__right__details__experience__title,
+.root__right__details__education__title {
+	color: rgb(3, 89, 94);
+	font-size: 16pt;
+	border-top: 1px solid rgba(3, 89, 94, .2);
+	border-bottom: 1px solid rgba(3, 89, 94, .2);
+	padding: .4em 0;
+	margin: 1em 0;
+}
+
+.root__right__details__experience__body__date,
+.root__right__details__education__body__date {
+	min-width: 170px;
+	width: 170px;
+	vertical-align: top;
+}
+
+.root__right__details__experience__body__title,
+.root__right__details__education__body__title {
+	font-size: 12pt;
+}
+
+.empty-row {
+	height: 2em;
+}
