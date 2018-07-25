@@ -195,3 +195,7 @@ html, body {
 .empty-row {
 	height: 2em;
 }
+
+.root__right__wrapper {
+	min-width: 700px;
+}
