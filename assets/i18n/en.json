@@ -1,0 +1,59 @@
+{
+  "HEADER": {
+    "FULL-NAME": "Alexander Myagkiy"
+  },
+  "LEFT_PANEL": {
+    "SHORT-DESCRIPTION": "Full-stack developer",
+    "PERSONAL-INFO": {
+      "HEADING": "Personal Info",
+      "ADDRESS-TITLE": "Address",
+      "ADDRESS": "Kiev, Ukraine",
+      "PHONE-TITLE": "Phone",
+      "EMAIL-TITLE": "E-mail",
+      "BIRTH-TITLE": "Date of birth",
+      "LINKEDIN-TITLE": "LinkedIn"
+    },
+    "SKILLS": {
+      "HEADING": "Skills",
+      "SKILL-1": "Java SE",
+      "SKILL-2": "Java EE",
+      "SKILL-3": "Spring Boot",
+      "SKILL-4": "JSF",
+      "SKILL-5": "JSP",
+      "SKILL-6": "Angular",
+      "SKILL-7": "HTML",
+      "SKILL-8": "JavaScript",
+      "SKILL-9": "AEM",
+      "SKILL-10": "JUnit",
+      "SKILL-11": "Relational Databases",
+      "SKILL-12": "MongoDB",
+      "SKILL-13": "Python",
+      "SKILL-14": "CSS/LESS",
+      "SKILL-15": "Android development",
+      "SKILL-16": "Linux, Windows, OSX",
+      "SKILL-17": "1C",
+      "SKILL-18": "Git",
+      "SKILL-19": "Adaptability"
+    }
+  },
+  "RIGHT-PANEL": {
+    "MAIN-DESCRIPTION": "Highly accomplished and experienced Java Core Developer with comprehensive mastery of many Java technologies and 5+ years experience. Full-stack developer with 2 years experience. Able to work independently with little to no supervision as well as functioning as a good team player or team leader.",
+    "EXPERIENCE": {
+      "TITLE": "Experience",
+      "RESPONSIBILITIES-TITLE": "Responsibilities:",
+      "EX-1-POSITION": "Full-stack developer at CyberSystem Group",
+      "EX-1-RESPONSIBILITIES": [ "Linux and network administration", "1C-based software development", "Web and Java server-based software development", "Projects deployment and troubleshooting", "Technical support" ],
+      "EX-2-POSITION": "AEM & Hybris developer at TechMatesGroup",
+      "EX-2-RESPONSIBILITIES": [ "AEM components development & support", "Documentation support", "AEM authoring", "Hybris development", "Hybris administration" ]
+    },
+    "EDUCATION": {
+      "TITLE": "Education",
+      "ED-1-SPECIALITY": "Junior Specialist degree in Software development",
+      "ED-1-PLACE": "CIST KNEU, Junior Specialist degree, Software development",
+      "ED-2-SPECIALITY": "Bachelor degree in Software development",
+      "ED-2-PLACE": "National University of Food Technologies, Bachelor degree, Software development",
+      "ED-3-SPECIALITY": "Specialist degree in Software development",
+      "ED-3-PLACE": "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\", Specialist degree, Software development"
+    }
+  }
+}
