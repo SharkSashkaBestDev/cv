@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SUPPORTED_LANGUAGES, UK} from '../constants/general.constants';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -8,6 +8,9 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  showAvatar = false;
+  @ViewChild('scaledAvatar') scaledAvatar: ElementRef;
 
   constructor(private translate: TranslateService) {
     translate.addLangs(SUPPORTED_LANGUAGES);
@@ -26,6 +29,15 @@ export class HeaderComponent implements OnInit {
 
   changeLanguage(lang: string) {
     this.translate.use(lang);
+  }
+
+  onAvatarHover(event) {
+    this.showAvatar = true;
+    this.scaledAvatar.nativeElement.style.transition = 'visibility 0s .5s, opacity .5s, margin-top .5s linear';
+  }
+
+  onAvatarMouseLeave(event) {
+    this.showAvatar = false;
   }
 
   get currentLanguage() {

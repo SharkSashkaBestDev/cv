@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span class="user-avatar"></span>
+    <span class="user-avatar" (mouseover)="onAvatarHover($event)" (mouseleave)="onAvatarMouseLeave($event)">
+      <img src="assets/images/koala.jpg" alt="Candidate avatar image">
+    </span>
     <span class="mat-display-1 no-margin">
       {{ 'HEADER.FULL-NAME' | translate }}
     </span>
@@ -24,3 +26,7 @@
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<div class="user-avatar-scaled" [ngClass]="showAvatar ? '' : 'hidden'" #scaledAvatar>
+  <img src="assets/images/koala.jpg" alt="Candidate avatar image scaled">
+</div>
