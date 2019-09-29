@@ -3,25 +3,35 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainBannerComponent } from './main-banner/main-banner.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import {
-  MatButtonModule, MatCardModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule,
-  MatMenuModule,
-  MatSidenavModule, MatSliderModule, MatSnackBarModule,
-  MatToolbarModule, MatTooltipModule
-} from '@angular/material';
-import { MatDialogModule } from '@angular/material/dialog';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeaderComponent } from './header/header.component';
+import { MaterialModule } from './material.module';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {from, Observable} from 'rxjs';
+
+// AoT requires an exported function for factories
+
+
+// export function HttpLoaderFactory(http: HttpClient) {
+//   return new TranslateHttpLoader(http);
+// }
+
+export class CustomTranslateLoader implements TranslateLoader {
+  getTranslation(lang: string): Observable<any> {
+    return from(import(`../assets/i18n/${lang}.json`));
+  }
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainBannerComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -29,22 +39,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatListModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSliderModule,
-    MatTooltipModule,
-    MatSnackBarModule,
-    MatDialogModule,
     FlexLayoutModule,
-    AppRoutingModule
+    MaterialModule,
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useClass: CustomTranslateLoader,
+        // useFactory: HttpLoaderFactory,
+        // deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

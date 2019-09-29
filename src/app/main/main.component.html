@@ -1,20 +1,132 @@
-<div class="container" fxFlex>
-  <div class="container-item" fxFlex="400px" *ngFor="let card of cards">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{ card.name }}</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="card.logo" [alt]="card.logoAlt">
-      <mat-card-content>
-        <p>
-          {{ card.description }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
+<div class="container">
+  <div class="left-panel">
+    <div class="main-short-description mat-subheading-2 no-margin">
+      {{ 'LEFT_PANEL.SHORT-DESCRIPTION' | translate }}
+    </div>
+
+    <div class="info-subpanel">
+      <div class="left-panel-heading">
+          <div class="mat-subheading-2 no-margin centered">
+            {{ 'LEFT_PANEL.PERSONAL-INFO.HEADING' | translate }}
+          </div>
+      </div>
+      <div class="info-group">
+        <div class="address-headline mat-body-strong mat-body-2">
+          {{ 'LEFT_PANEL.PERSONAL-INFO.ADDRESS-TITLE' | translate }}
+        </div>
+        <div class="address-body mat-body mat-body-1">
+            <a class="address-link" target="_blank" [href]="addressLink">
+              {{ 'LEFT_PANEL.PERSONAL-INFO.ADDRESS' | translate }}
+            </a>
+        </div>
+      </div>
+      <div class="info-group">
+        <div class="phone-headline mat-body-strong mat-body-2">
+          {{ 'LEFT_PANEL.PERSONAL-INFO.PHONE-TITLE' | translate }}
+        </div>
+        <div class="phone-body mat-body mat-body-1">
+          <a class="phone-link" [href]="'tel:' + phone">
+            {{ phoneFormatted }}
+          </a>
+        </div>
+      </div>
+      <div class="info-group">
+        <div class="email-headline mat-body-strong mat-body-2">
+          {{ 'LEFT_PANEL.PERSONAL-INFO.EMAIL-TITLE' | translate }}
+        </div>
+        <div class="email-body mat-body mat-body-1" *ngFor="let email of emails">
+          <a class="email-link" [href]="'mailto:' + email">{{ email }}</a>
+        </div>
+      </div>
+      <div class="info-group">
+        <div class="birth-headline mat-body-strong mat-body-2">
+          {{ 'LEFT_PANEL.PERSONAL-INFO.BIRTH-TITLE' | translate }}
+        </div>
+        <div class="birth-body mat-body mat-body-1">
+          {{ birth }}
+        </div>
+      </div>
+      <div class="info-group">
+        <div class="linkedin-headline mat-body-strong mat-body-2">
+          {{ 'LEFT_PANEL.PERSONAL-INFO.LINKEDIN-TITLE' | translate }}
+        </div>
+        <div class="linkedin-body mat-body mat-body-1">
+          <a class="linkedin-link" [href]="linkedin" target="_blank">{{ linkedin }}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-subpanel">
+      <div class="left-panel-heading mat-subheading-2 no-margin centered">
+          <div>
+            {{ 'LEFT_PANEL.SKILLS.HEADING' | translate }}
+          </div>
+      </div>
+      <div class="skills-body">
+        <mat-list>
+          <mat-list-item class="skill-group" *ngFor="let skill of skills">
+            <div class="skill-headline">
+              <div class="mat-subheading-2 no-margin">{{ 'LEFT_PANEL.SKILLS.SKILL-' + skill.id | translate }}</div>
+            </div>
+            <mat-progress-bar color="accent" mode="determinate" [value]="20 * skill.mastery"></mat-progress-bar>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="right-panel">
+    <div class="main-description mat-subheading-2 no-margin">
+      {{ 'RIGHT-PANEL.MAIN-DESCRIPTION' | translate }}
+    </div>
+    <div class="experience-panel">
+      <div class="experience-panel-heading mat-h1 mat-headline no-margin">
+        {{ 'RIGHT-PANEL.EXPERIENCE.TITLE' | translate }}
+      </div>
+      <div class="experience-panel-data">
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let exp of experiences">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ exp.date }}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ 'RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-POSITION' | translate }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div class="responsibilities-heading mat-h2 mat-headline no-margin">{{ 'RIGHT-PANEL.EXPERIENCE.RESPONSIBILITIES-TITLE' | translate }}</div>
+              <mat-list>
+                <mat-list-item class="responsibility" *ngFor="let responsibility of ('RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-RESPONSIBILITIES' | translate)">
+                  {{ responsibility }}
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+      </div>
+    </div>
+    <div class="education-panel">
+      <div class="education-panel-heading mat-h1 mat-headline no-margin">
+        {{ 'RIGHT-PANEL.EDUCATION.TITLE' | translate }}
+      </div>
+      <div class="education-panel-data">
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let ed of educations">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ ed.date }}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-SPECIALITY' | translate }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div class="mat-h2 mat-headline no-margin">
+                {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-PLACE' | translate }}
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+      </div>
+    </div>
 </div>

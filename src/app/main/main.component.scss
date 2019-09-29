@@ -1,20 +1,122 @@
-.example-card {
-  max-width: 400px;
-}
+@import '../../styles/themes/dark-green-theme';
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
+$light: 300;
+$dark: 900;
+$main-border-spacing: 1em;
+$header-height: 64px;
 
 .container {
-  overflow-x: scroll;
-  min-width: 100%;
+  color: white;
+  width: 20%;
+  min-width: 230px;
+  background-color: mat-color($cv-app-primary, default);
+  height: calc(100% - #{$header-height});
+  max-height: calc(100% - #{$header-height});
+  overflow-y: hidden;
+  overflow-x: hidden;
 
-  &-item {
+  .left-panel {
+    height: 100%; 
 
-    &:not(:last-child) {
-      margin-right: 1em;
+    .left-panel-heading {
+      background-color: mat-color($cv-app-primary, $dark);    
     }
+
+    .info-group {
+      overflow-wrap: break-word;
+    }
+
+    .main-short-description,
+    .left-panel-heading,
+    .info-group,    
+    .skill-headline {
+      padding: .5em $main-border-spacing;
+    }
+
+    .skill-progress {
+      background-color: mat-color($cv-app-primary, $dark);
+      margin-left: 1em;
+      margin-right: 1em;
+      height: 1em;
+      width: auto;
+      display: block;
+    }
+
+    .skill-mastery {
+      right: 1em;
+      margin-top: .5em;
+    }
+
+    .skill-group {
+      margin-top: 1em;
+      min-width: 12em;
+
+      &:last-of-type {
+        margin-bottom: 2em;
+      }
+    }
+
+    .skill-group:first-of-type {
+      margin-top: .5em;
+    }
+
+    .skills-body {
+      overflow-y: auto;
+    }
+
+    .skill-headline {
+      color: white;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .linkedin-link,
+    .linkedin-link:link,
+    .linkedin-link:visited,
+    .linkedin-link:hover,
+    .linkedin-link:active,
+    .email-link,
+    .email-link:link,
+    .email-link:visited,
+    .email-link:hover,
+    .email-link:active,
+    .phone-link,
+    .phone-link:link,
+    .phone-link:visited,
+    .phone-link:hover,
+    .phone-link:active,
+    .address-link,
+    .address-link:link,
+    .address-link:visited,
+    .address-link:hover,
+    .address-link:active, {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.right-panel {
+  color: black;
+  top: 64px;
+  margin-top: .5em;
+  position: absolute;
+  margin-right: 1em;
+
+  .experience-panel-heading,
+  .education-panel-heading {
+    color: mat-color($cv-app-primary, $dark);
+    border-top: 1px solid mat-color($cv-app-primary, $dark);
+    border-bottom: 1px solid mat-color($cv-app-primary, $dark);
+  }
+
+  .experience-panel,
+  .education-panel {
+    margin-top: 1.5em;
+  }
+
+  .experience-panel-data,
+  .education-panel-data {
+    margin-top: 1.5em;
   }
 }

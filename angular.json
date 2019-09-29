@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vovchansk-community": {
+    "cv": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vovchansk-community",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/themes/dark-green-theme.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/scripts/main.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -62,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vovchansk-community:build"
+            "browserTarget": "cv:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vovchansk-community:build:production"
+              "browserTarget": "cv:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vovchansk-community:build"
+            "browserTarget": "cv:build"
           }
         },
         "test": {
@@ -107,7 +110,7 @@
         }
       }
     },
-    "vovchansk-community-e2e": {
+    "cv-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vovchansk-community:serve"
+            "devServerTarget": "cv:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vovchansk-community:serve:production"
+              "devServerTarget": "cv:serve:production"
             }
           }
         },
@@ -136,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "vovchansk-community"
+  "defaultProject": "cv"
 }
