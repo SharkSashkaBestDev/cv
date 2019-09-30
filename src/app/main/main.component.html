@@ -63,7 +63,7 @@
           </div>
       </div>
       <div class="skills-body">
-        <mat-list>
+        <mat-list ngClass="skills-body-list">
           <mat-list-item class="skill-group" *ngFor="let skill of skills">
             <div class="skill-headline">
               <div class="mat-subheading-2 no-margin">{{ 'LEFT_PANEL.SKILLS.SKILL-' + skill.id | translate }}</div>
@@ -87,8 +87,8 @@
       <div class="experience-panel-data">
         <mat-accordion>
             <mat-expansion-panel *ngFor="let exp of experiences">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
+              <mat-expansion-panel-header class="experience-panel-header">
+                <mat-panel-title class="centered limited-mobile-width">
                   {{ exp.date }}
                 </mat-panel-title>
                 <mat-panel-description>
@@ -113,8 +113,8 @@
       <div class="education-panel-data">
         <mat-accordion>
             <mat-expansion-panel *ngFor="let ed of educations">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
+              <mat-expansion-panel-header class="education-panel-header">
+                <mat-panel-title class="centered limited-mobile-width">
                   {{ ed.date }}
                 </mat-panel-title>
                 <mat-panel-description>

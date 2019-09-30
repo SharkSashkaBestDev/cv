@@ -4,6 +4,7 @@ $light: 300;
 $dark: 900;
 $main-border-spacing: 1em;
 $header-height: 64px;
+$mobile-screen: 420px;
 
 .container {
   color: white;
@@ -118,5 +119,54 @@ $header-height: 64px;
   .experience-panel-data,
   .education-panel-data {
     margin-top: 1.5em;
+  }
+}
+
+@media all and (max-width: $mobile-screen) {
+  html, body, .container, .right-panel {
+    overflow-y: auto !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-height: unset !important;
+  }
+
+  .right-panel {
+    margin-bottom: 2em;
+    position: absolute;
+    top: unset !important;
+
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .skills-body {
+    min-height: 10em;
+  }
+
+  .skills-body-list, .container {
+    max-height: unset !important;
+    height: auto !important;
+  }
+
+  .left-panel, .skills-body, .right-panel {
+    max-height: 100% !important;
+    height: 100% !important;
+  }
+
+  .education-panel-header, .experience-panel-header {
+    height: 6em !important;
+  }
+
+  .limited-mobile-width {
+    max-width: 5em;
+  }
+
+  .education-panel {
+    height: 100%;
+    max-height: 100%;
   }
 }
