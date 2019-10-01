@@ -4,6 +4,7 @@ $dark: 900;
 $topPanelHeight: 64px;
 $mobile-screen: 420px;
 $mobile-heading-font-size: 14pt;
+$mobile-screen-horizontal: 750px;
 
 .example-icon {
   padding: 0 14px;
@@ -73,6 +74,17 @@ $mobile-heading-font-size: 14pt;
 
   .heading-full-name {
     font-size: $mobile-heading-font-size;
+  }
+
+  .user-avatar-scaled img {
+    display: none;
+  }
+}
+
+
+@media all and (max-width: $mobile-screen-horizontal) {
+  .user-avatar {
+    display: none;
   }
 
   .user-avatar-scaled img {

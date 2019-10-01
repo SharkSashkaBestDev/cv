@@ -74,9 +74,9 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="right-panel">
+
+  <div class="right-panel">
     <div class="main-description mat-subheading-2 no-margin">
       {{ 'RIGHT-PANEL.MAIN-DESCRIPTION' | translate }}
     </div>
@@ -86,24 +86,24 @@
       </div>
       <div class="experience-panel-data">
         <mat-accordion>
-            <mat-expansion-panel *ngFor="let exp of experiences">
-              <mat-expansion-panel-header class="experience-panel-header">
-                <mat-panel-title class="centered limited-mobile-width">
-                  {{ exp.date }}
-                </mat-panel-title>
-                <mat-panel-description>
-                  {{ 'RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-POSITION' | translate }}
-                </mat-panel-description>
-              </mat-expansion-panel-header>
+          <mat-expansion-panel *ngFor="let exp of experiences">
+            <mat-expansion-panel-header class="experience-panel-header">
+              <mat-panel-title class="centered limited-mobile-width">
+                {{ exp.date }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ 'RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-POSITION' | translate }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
 
-              <div class="responsibilities-heading mat-h2 mat-headline no-margin">{{ 'RIGHT-PANEL.EXPERIENCE.RESPONSIBILITIES-TITLE' | translate }}</div>
-              <mat-list>
-                <mat-list-item class="responsibility" *ngFor="let responsibility of ('RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-RESPONSIBILITIES' | translate)">
-                  {{ responsibility }}
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-          </mat-accordion>
+            <div class="responsibilities-heading mat-h2 mat-headline no-margin">{{ 'RIGHT-PANEL.EXPERIENCE.RESPONSIBILITIES-TITLE' | translate }}</div>
+            <mat-list>
+              <mat-list-item class="responsibility" *ngFor="let responsibility of ('RIGHT-PANEL.EXPERIENCE.EX-' + exp.id + '-RESPONSIBILITIES' | translate)">
+                {{ responsibility }}
+              </mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </div>
     <div class="education-panel">
@@ -112,21 +112,22 @@
       </div>
       <div class="education-panel-data">
         <mat-accordion>
-            <mat-expansion-panel *ngFor="let ed of educations">
-              <mat-expansion-panel-header class="education-panel-header">
-                <mat-panel-title class="centered limited-mobile-width">
-                  {{ ed.date }}
-                </mat-panel-title>
-                <mat-panel-description>
-                  {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-SPECIALITY' | translate }}
-                </mat-panel-description>
-              </mat-expansion-panel-header>
+          <mat-expansion-panel *ngFor="let ed of educations">
+            <mat-expansion-panel-header class="education-panel-header">
+              <mat-panel-title class="centered limited-mobile-width">
+                {{ ed.date }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-SPECIALITY' | translate }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
 
-              <div class="mat-h2 mat-headline no-margin">
-                {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-PLACE' | translate }}
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
+            <div class="mat-h2 mat-headline no-margin">
+              {{ 'RIGHT-PANEL.EDUCATION.ED-' + ed.id + '-PLACE' | translate }}
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </div>
+  </div>
 </div>
