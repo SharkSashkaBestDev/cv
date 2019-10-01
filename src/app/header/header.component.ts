@@ -9,6 +9,8 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
+  TABLET_SIZE = 1024;
+
   showAvatar = false;
   @ViewChild('scaledAvatar') scaledAvatar: ElementRef;
 
@@ -32,6 +34,10 @@ export class HeaderComponent implements OnInit {
   }
 
   onAvatarHover(event) {
+    if (innerWidth <= this.TABLET_SIZE) {
+      return;
+    }
+
     this.showAvatar = true;
     this.scaledAvatar.nativeElement.style.transition = 'visibility 0s .5s, opacity .5s, margin-top .5s linear';
   }

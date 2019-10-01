@@ -5,6 +5,11 @@ $topPanelHeight: 64px;
 $mobile-screen: 420px;
 $mobile-heading-font-size: 14pt;
 $mobile-screen-horizontal: 750px;
+$tablet-screen: 1024px;
+$tablet-screen-horizontal: 1366px;
+$ua-color: blue, yellow;
+$en-color: blue 0%, white 10%, blue 20%, red 40%, white 55%, red 65%, blue 70%;
+$ru-color: white 0%, white 30%, blue 31%, red 70%;
 
 .example-icon {
   padding: 0 14px;
@@ -45,6 +50,7 @@ $mobile-screen-horizontal: 750px;
       -webkit-box-shadow: 0 0 25em 10em rgba(0,0,0,0.5);
       -moz-box-shadow: 0 0 25em 10em rgba(0,0,0,0.5);
       box-shadow: 0 0 25em 10em rgba(0,0,0,0.5);
+      max-width: 100%;
     }
   }
 }
@@ -54,6 +60,33 @@ $mobile-screen-horizontal: 750px;
   opacity: 0;
   margin-top: -50%;
   transition: visibility 0s .5s, opacity .5s, margin-top .5s linear;
+}
+
+.ua-icon {
+  background: -webkit-linear-gradient($ua-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($ua-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($ua-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($ua-color); /* Standard syntax */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.en-icon {
+  background: -webkit-linear-gradient($en-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($en-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($en-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($en-color); /* Standard syntax */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ru-icon {
+  background: -webkit-linear-gradient($ru-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($ru-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($ru-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($ru-color); /* Standard syntax */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes appearing {
@@ -82,12 +115,15 @@ $mobile-screen-horizontal: 750px;
 }
 
 
-@media all and (max-width: $mobile-screen-horizontal) {
-  .user-avatar {
-    display: none;
-  }
-
+@media all and (max-width: $tablet-screen) {
   .user-avatar-scaled img {
-    display: none;
+    display: none !important;
+  }
+}
+
+
+@media all and (max-width: $tablet-screen-horizontal) {
+  .user-avatar-scaled img {
+    margin-top: 1%;
   }
 }

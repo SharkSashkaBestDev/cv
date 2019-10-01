@@ -12,15 +12,15 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="changeLanguage('uk')" [disabled]="currentLanguage === 'uk'">
-        <mat-icon>language</mat-icon>
+        <mat-icon class="ua-icon">language</mat-icon>
         <span>Українська</span>
       </button>
       <button mat-menu-item (click)="changeLanguage('en')" [disabled]="currentLanguage === 'en'">
-        <mat-icon>language</mat-icon>
+        <mat-icon class="en-icon">language</mat-icon>
         <span>English</span>
       </button>
       <button mat-menu-item (click)="changeLanguage('ru')" [disabled]="currentLanguage === 'ru'">
-        <mat-icon>language</mat-icon>
+        <mat-icon class="ru-icon">language</mat-icon>
         <span>Русский</span>
       </button>
     </mat-menu>
