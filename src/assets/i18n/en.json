@@ -1,6 +1,7 @@
 {
   "HEADER": {
-    "FULL-NAME": "Alexander Myagkiy"
+    "FULL-NAME": "Alexander Myagkiy",
+    "CHOOSE-LANGUAGE": "Choose a language"
   },
   "LEFT_PANEL": {
     "SHORT-DESCRIPTION": "Full-stack developer",

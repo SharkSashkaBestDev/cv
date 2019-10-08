@@ -1,6 +1,7 @@
 {
   "HEADER": {
-    "FULL-NAME": "Мягкий Олександр"
+    "FULL-NAME": "Мягкий Олександр",
+    "CHOOSE-LANGUAGE": "Оберіть мову"
   },
   "LEFT_PANEL": {
     "SHORT-DESCRIPTION": "Full-stack розробник",

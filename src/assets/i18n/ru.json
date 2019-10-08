@@ -1,6 +1,7 @@
 {
   "HEADER": {
-    "FULL-NAME": "Мягкий Александр"
+    "FULL-NAME": "Мягкий Александр",
+    "CHOOSE-LANGUAGE": "Выберите язык"
   },
   "LEFT_PANEL": {
     "SHORT-DESCRIPTION": "Full-stack разработчик",

@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {SUPPORTED_LANGUAGES, UK} from '../constants/general.constants';
+import {SUPPORTED_LANGUAGES, UK, EN, RU} from '../constants/general.constants';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
   showAvatar = false;
   @ViewChild('scaledAvatar') scaledAvatar: ElementRef;
 
+  selectedLang: any;
+
   constructor(private translate: TranslateService) {
     translate.addLangs(SUPPORTED_LANGUAGES);
     translate.setDefaultLang(SUPPORTED_LANGUAGES[0]);
@@ -24,6 +26,8 @@ export class HeaderComponent implements OnInit {
     } else {
       translate.use(UK);
     }
+
+    this.selectedLang = this.translate.currentLang;
   }
 
   ngOnInit() {
@@ -48,6 +52,14 @@ export class HeaderComponent implements OnInit {
 
   get currentLanguage() {
     return this.translate.currentLang;
+  }
+
+  getLangLabel(lang) {
+    switch (lang) {
+      case UK: return 'Українська';
+      case RU: return 'Русский';
+      case EN: return 'English';
+    }
   }
 
 }

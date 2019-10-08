@@ -3,6 +3,9 @@
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
 
 $config: mat-typography-config();
+$ua-color: blue, yellow;
+$en-color: blue 0%, white 10%, blue 20%, red 40%, white 55%, red 65%, blue 70%;
+$ru-color: white 0%, white 30%, blue 31%, red 70%;
 
 body {
 	font-family: mat-font-family($config);
@@ -37,3 +40,32 @@ html, body {
 .centered {
 	text-align: center;
 }
+
+// Languages
+// TODO: use flags
+/*.uk .mat-select-value-text span {
+  background: -webkit-linear-gradient(bottom, $ua-color);
+  background: -o-linear-gradient(bottom, $ua-color);
+  background: -moz-linear-gradient(bottom, $ua-color);
+  background: linear-gradient(to bottom, $ua-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.en .mat-select-value-text span {
+  background: -webkit-linear-gradient(bottom, $en-color);
+  background: -o-linear-gradient(bottom, $en-color);
+  background: -moz-linear-gradient(bottom, $en-color);
+  background: linear-gradient(to bottom, $en-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ru .mat-select-value-text span {
+  background: -webkit-linear-gradient(bottom, $ru-color);
+  background: -o-linear-gradient(bottom, $ru-color);
+  background: -moz-linear-gradient(bottom, $ru-color);
+  background: linear-gradient(to bottom, $ru-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/

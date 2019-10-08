@@ -11,18 +11,14 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="changeLanguage('uk')" [disabled]="currentLanguage === 'uk'">
-        <mat-icon class="ua-icon">language</mat-icon>
-        <span>Українська</span>
-      </button>
-      <button mat-menu-item (click)="changeLanguage('en')" [disabled]="currentLanguage === 'en'">
-        <mat-icon class="en-icon">language</mat-icon>
-        <span>English</span>
-      </button>
-      <button mat-menu-item (click)="changeLanguage('ru')" [disabled]="currentLanguage === 'ru'">
-        <mat-icon class="ru-icon">language</mat-icon>
-        <span>Русский</span>
-      </button>
+      <mat-form-field class="left-right-spaces">
+        <mat-label>{{ 'HEADER.CHOOSE-LANGUAGE' | translate }}</mat-label>
+        <mat-select [(value)]="selectedLang" (selectionChange)="changeLanguage(selectedLang)" [className]="selectedLang">
+          <mat-option *ngFor="let lang of translate.getLangs()" [value]="lang" >
+            <span>{{ getLangLabel(lang) }}</span>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
